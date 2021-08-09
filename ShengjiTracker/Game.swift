@@ -9,8 +9,10 @@ import Foundation
 
 class Game {
     var playedCards = [Card: Int]()
+    var level = 2
 
-    func start() {
+    func start(level: Int = 2) {
+        self.level = level
         playedCards.removeAll(keepingCapacity: true)
     }
 

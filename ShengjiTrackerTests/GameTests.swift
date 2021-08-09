@@ -10,15 +10,11 @@ import XCTest
 
 class GameTests: XCTestCase {
     func test_start_existingCards_shouldBeEmpty() {
-        let sut = Game()
-
-        sut.start()
-
-        XCTAssertTrue(sut.playedCards.isEmpty)
+        XCTAssertTrue(makeSUT().playedCards.isEmpty)
     }
 
     func test_start_existingPlayedCards_shouldBeEmptied() {
-        let sut = Game()
+        let sut = makeSUT()
         let card = Card(suit: .spades, rank: .ace)
 
         sut.playCard(card)
@@ -28,20 +24,18 @@ class GameTests: XCTestCase {
     }
 
     func test_playAceOfSpades_gameShouldContainCard() {
-        let sut = Game()
+        let sut = makeSUT()
         let aceOfSpades = Card(suit: .spades, rank: .ace)
 
-        sut.start()
         sut.playCard(aceOfSpades)
 
         XCTAssertEqual(sut.playedCards, [aceOfSpades: 1])
     }
 
     func test_playAceOfSpades_gameShouldContain2Cards() {
-        let sut = Game()
+        let sut = makeSUT()
         let aceOfSpades = Card(suit: .spades, rank: .ace)
 
-        sut.start()
         sut.playCard(aceOfSpades)
         sut.playCard(aceOfSpades)
 
@@ -49,10 +43,9 @@ class GameTests: XCTestCase {
     }
 
     func test_playAceOfSpadesThrice_gameShouldContain2Cards() {
-        let sut = Game()
+        let sut = makeSUT()
         let aceOfSpades = Card(suit: .spades, rank: .ace)
 
-        sut.start()
         sut.playCard(aceOfSpades)
         sut.playCard(aceOfSpades)
         sut.playCard(aceOfSpades)
@@ -61,11 +54,10 @@ class GameTests: XCTestCase {
     }
 
     func test_playTwoDifferent_gameShouldContain2Cards() {
-        let sut = Game()
+        let sut = makeSUT()
         let aceOfSpades = Card(suit: .spades, rank: .ace)
         let kingOfClubs = Card(suit: .clubs, rank: .king)
 
-        sut.start()
         sut.playCard(aceOfSpades)
         sut.playCard(kingOfClubs)
 
@@ -76,11 +68,10 @@ class GameTests: XCTestCase {
     }
 
     func test_playBowers_gameShouldContainBowers() {
-        let sut = Game()
+        let sut = makeSUT()
         let leftBower = Card.leftBower
         let rightBower = Card.rightBower
 
-        sut.start()
         sut.playCard(leftBower)
         sut.playCard(rightBower)
 
@@ -88,5 +79,20 @@ class GameTests: XCTestCase {
             leftBower: 1,
             rightBower: 1
         ])
+    }
+
+    func test_gameShouldStartWithLevel2() {
+        XCTAssertEqual(makeSUT().level, 2)
+    }
+
+    func test_startLevel3_gameShouldHaveLevel3() {
+        let sut = makeSUT(level: 3)
+        XCTAssertEqual(sut.level, 3)
+    }
+
+    func makeSUT(level: Int = 2) -> Game {
+        let sut = Game()
+        sut.start(level: level)
+        return sut
     }
 }
