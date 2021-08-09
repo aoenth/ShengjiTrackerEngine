@@ -30,11 +30,11 @@ struct Card: Hashable {
     static let rightBower = Card(suit: .none, rank: .rightBower)
 }
 
-enum Suit: Int {
+enum Suit: UInt8 {
     case spades, hearts, clubs, diamonds, none
 }
 
-enum Rank: Int {
+enum Rank: UInt8 {
     case two = 2
     case three
     case four
