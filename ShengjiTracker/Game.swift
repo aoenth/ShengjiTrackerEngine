@@ -23,10 +23,13 @@ class Game {
 struct Card: Hashable {
     let suit: Suit
     let rank: Rank
+
+    static let leftBower = Card(suit: .none, rank: .leftBower)
+    static let rightBower = Card(suit: .none, rank: .rightBower)
 }
 
 enum Suit: Int {
-    case spades, hearts, clubs, diamonds
+    case spades, hearts, clubs, diamonds, none
 }
 
 enum Rank: Int {
@@ -43,4 +46,6 @@ enum Rank: Int {
     case queen
     case king
     case ace
+    case leftBower
+    case rightBower
 }

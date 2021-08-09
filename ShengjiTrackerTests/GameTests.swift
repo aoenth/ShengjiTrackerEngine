@@ -74,4 +74,19 @@ class GameTests: XCTestCase {
             kingOfClubs: 1
         ])
     }
+
+    func test_playBowers_gameShouldContainBowers() {
+        let sut = Game()
+        let leftBower = Card.leftBower
+        let rightBower = Card.rightBower
+
+        sut.start()
+        sut.playCard(leftBower)
+        sut.playCard(rightBower)
+
+        XCTAssertEqual(sut.playedCards, [
+            leftBower: 1,
+            rightBower: 1
+        ])
+    }
 }

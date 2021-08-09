@@ -22,4 +22,18 @@ class CardTests: XCTestCase {
         XCTAssertEqual(sut.suit, .spades)
         XCTAssertEqual(sut.rank, .two)
     }
+
+    func test_canInstantiateLeftBowser() {
+        let sut = Card.leftBower
+
+        XCTAssertEqual(sut.suit, .none)
+        XCTAssertEqual(sut.rank, .leftBower)
+    }
+
+    func test_canInstantiateRightBowser() {
+        let sut = Card.rightBower
+
+        XCTAssertEqual(sut.suit, .none)
+        XCTAssertEqual(sut.rank, .rightBower)
+    }
 }
