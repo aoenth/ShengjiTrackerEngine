@@ -27,7 +27,7 @@ class PlayerTracker: Trackable {
     }
 }
 
-class Player {
+class Player: Trackable {
     private var terminalSuits: Set<Suit> = []
 
     func isTerminal(for suit: Suit) -> Bool {
