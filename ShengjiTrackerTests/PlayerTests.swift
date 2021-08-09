@@ -29,6 +29,18 @@ class PlayerTests: XCTestCase {
         XCTAssertFalse(sut.isTerminal(for: .diamonds))
     }
 
+    func test_terminatedSpadesTwice_playerShouldOnlyHaveTrackedSpades() {
+        let sut = Player()
+
+        sut.terminate(suit: .spades)
+        sut.terminate(suit: .spades)
+
+        XCTAssertTrue(sut.isTerminal(for: .spades))
+        XCTAssertFalse(sut.isTerminal(for: .hearts))
+        XCTAssertFalse(sut.isTerminal(for: .clubs))
+        XCTAssertFalse(sut.isTerminal(for: .diamonds))
+    }
+
     func test_shouldBeAbleToResetViaTrackableProtocol() {
         let sut = Player()
 
