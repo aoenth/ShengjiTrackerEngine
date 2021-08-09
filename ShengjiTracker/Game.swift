@@ -10,7 +10,7 @@ import Foundation
 class Game {
     var playedCards = [Card: Int]()
     var level = 2
-
+    
     func start(level: Int = 2) {
         self.level = level
         playedCards.removeAll(keepingCapacity: true)
@@ -32,6 +32,10 @@ struct Card: Hashable {
 
 enum Suit: UInt8 {
     case spades, hearts, clubs, diamonds, none
+
+    static var allSuits: [Suit] {
+        [.spades, .hearts, .clubs, .diamonds]
+    }
 }
 
 enum Rank: UInt8 {
