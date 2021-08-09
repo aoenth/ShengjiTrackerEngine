@@ -90,7 +90,7 @@ class GameTests: XCTestCase {
         XCTAssertEqual(sut.level, 3)
     }
 
-    func makeSUT(level: Int = 2) -> Game {
+    private func makeSUT(level: Int = 2) -> Game {
         let sut = Game()
         sut.start(level: level)
         return sut
