@@ -22,7 +22,7 @@ class PlayerTracker: Trackable {
 
     func start(level: Int) {
         players.forEach {
-            $0.didStartNewGame()
+            $0.start(level: level)
         }
     }
 }
@@ -38,7 +38,7 @@ class Player {
         terminalSuits.insert(suit)
     }
 
-    func didStartNewGame() {
+    func start(level: Int) {
         terminalSuits.removeAll(keepingCapacity: true)
     }
 }

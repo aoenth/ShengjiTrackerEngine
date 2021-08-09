@@ -14,6 +14,7 @@
 		7B876B7026C0B8DB008D9077 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B876B6F26C0B8DB008D9077 /* CardTests.swift */; };
 		7B876B7226C0C198008D9077 /* PlayerTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B876B7126C0C198008D9077 /* PlayerTracker.swift */; };
 		7B876B7426C0C1A0008D9077 /* PlayerTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B876B7326C0C1A0008D9077 /* PlayerTrackerTests.swift */; };
+		7B876B7626C0CCD3008D9077 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B876B7526C0CCD3008D9077 /* PlayerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		7B876B6F26C0B8DB008D9077 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		7B876B7126C0C198008D9077 /* PlayerTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTracker.swift; sourceTree = "<group>"; };
 		7B876B7326C0C1A0008D9077 /* PlayerTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTrackerTests.swift; sourceTree = "<group>"; };
+		7B876B7526C0CCD3008D9077 /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				7B876B6B26C0B30F008D9077 /* GameTests.swift */,
 				7B876B6F26C0B8DB008D9077 /* CardTests.swift */,
 				7B876B7326C0C1A0008D9077 /* PlayerTrackerTests.swift */,
+				7B876B7526C0CCD3008D9077 /* PlayerTests.swift */,
 			);
 			path = ShengjiTrackerTests;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B876B7626C0CCD3008D9077 /* PlayerTests.swift in Sources */,
 				7B876B7426C0C1A0008D9077 /* PlayerTrackerTests.swift in Sources */,
 				7B876B6C26C0B30F008D9077 /* GameTests.swift in Sources */,
 				7B876B7026C0B8DB008D9077 /* CardTests.swift in Sources */,
