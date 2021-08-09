@@ -7,7 +7,11 @@
 
 import Foundation
 
-class Game {
+protocol Trackable {
+    func start(level: Int)
+}
+
+class Game: Trackable {
     var playedCards = [Card: Int]()
     var level = 2
     

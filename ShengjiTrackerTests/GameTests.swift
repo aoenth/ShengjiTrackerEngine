@@ -69,15 +69,12 @@ class GameTests: XCTestCase {
 
     func test_playBowers_gameShouldContainBowers() {
         let sut = makeSUT()
-        let leftBower = Card.leftBower
-        let rightBower = Card.rightBower
-
-        sut.playCard(leftBower)
-        sut.playCard(rightBower)
+        sut.playCard(.leftBower)
+        sut.playCard(.rightBower)
 
         XCTAssertEqual(sut.playedCards, [
-            leftBower: 1,
-            rightBower: 1
+            .leftBower: 1,
+            .rightBower: 1
         ])
     }
 

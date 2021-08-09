@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PlayerTracker {
+class PlayerTracker: Trackable {
     let players = [
         Player(),
         Player(),
@@ -20,7 +20,7 @@ class PlayerTracker {
         players[index].terminate(suit: suit)
     }
 
-    func didStartNewGame() {
+    func start(level: Int) {
         players.forEach {
             $0.didStartNewGame()
         }

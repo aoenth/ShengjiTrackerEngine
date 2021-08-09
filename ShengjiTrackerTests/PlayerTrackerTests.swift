@@ -48,7 +48,7 @@ class PlayerTrackerTests: XCTestCase {
         sut.trackTerminalSuit(.spades, forPlayer: 3)
         sut.trackTerminalSuit(.hearts, forPlayer: 3)
 
-        sut.didStartNewGame()
+        sut.start(level: 2)
 
         assertEmpty(sut: sut)
     }
@@ -67,7 +67,7 @@ class PlayerTrackerTests: XCTestCase {
         assertEmpty(sut: sut)
     }
 
-    func assertEmpty(sut: PlayerTracker) {
+    private func assertEmpty(sut: PlayerTracker) {
         for player in sut.players {
             for suit in Suit.allSuits {
                 XCTAssertFalse(player.isTerminal(for: suit))
