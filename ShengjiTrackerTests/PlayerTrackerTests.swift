@@ -10,13 +10,7 @@ import XCTest
 
 class PlayerTrackerTests: XCTestCase {
     func test_start_playerShouldHaveNoSuitsTerminated() {
-        let sut = PlayerTracker()
-
-        for player in sut.players {
-            for suit in Suit.allSuits {
-                XCTAssertFalse(player.isTerminal(for: suit))
-            }
-        }
+        assertEmpty(sut: PlayerTracker())
     }
 
     func test_playerTerminatedSpades_shouldTrackTermination() {
@@ -56,6 +50,24 @@ class PlayerTrackerTests: XCTestCase {
 
         sut.didStartNewGame()
 
+        assertEmpty(sut: sut)
+    }
+
+    func test_playerTrackerReceivedUnknownPlayerIndex_shouldDoNothing() {
+        let sut = PlayerTracker()
+        sut.trackTerminalSuit(.spades, forPlayer: 4)
+
+        assertEmpty(sut: sut)
+    }
+
+    func test_playerTrackerReceivedUnknownAndNegativePlayerIndex_shouldDoNothing() {
+        let sut = PlayerTracker()
+        sut.trackTerminalSuit(.spades, forPlayer: -1)
+
+        assertEmpty(sut: sut)
+    }
+
+    func assertEmpty(sut: PlayerTracker) {
         for player in sut.players {
             for suit in Suit.allSuits {
                 XCTAssertFalse(player.isTerminal(for: suit))

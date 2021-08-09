@@ -16,6 +16,7 @@ class PlayerTracker {
     ]
 
     func trackTerminalSuit(_ suit: Suit, forPlayer index: Int) {
+        guard players.indices ~= index else { return }
         players[index].terminate(suit: suit)
     }
 
