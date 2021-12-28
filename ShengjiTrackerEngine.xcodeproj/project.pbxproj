@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B876B5C26C0B28A008D9077 /* ShengjiTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B876B5326C0B28A008D9077 /* ShengjiTracker.framework */; };
-		7B876B6226C0B28A008D9077 /* ShengjiTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B876B5626C0B28A008D9077 /* ShengjiTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B876B5C26C0B28A008D9077 /* ShengjiTrackerEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B876B5326C0B28A008D9077 /* ShengjiTrackerEngine.framework */; };
 		7B876B6C26C0B30F008D9077 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B876B6B26C0B30F008D9077 /* GameTests.swift */; };
 		7B876B6E26C0B39A008D9077 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B876B6D26C0B39A008D9077 /* Game.swift */; };
 		7B876B7026C0B8DB008D9077 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B876B6F26C0B8DB008D9077 /* CardTests.swift */; };
@@ -28,9 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7B876B5326C0B28A008D9077 /* ShengjiTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShengjiTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B876B5626C0B28A008D9077 /* ShengjiTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShengjiTracker.h; sourceTree = "<group>"; };
-		7B876B5B26C0B28A008D9077 /* ShengjiTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShengjiTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B876B5326C0B28A008D9077 /* ShengjiTrackerEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShengjiTrackerEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B876B5B26C0B28A008D9077 /* ShengjiTrackerEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShengjiTrackerEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B876B6B26C0B30F008D9077 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		7B876B6D26C0B39A008D9077 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		7B876B6F26C0B8DB008D9077 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
@@ -51,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B876B5C26C0B28A008D9077 /* ShengjiTracker.framework in Frameworks */,
+				7B876B5C26C0B28A008D9077 /* ShengjiTrackerEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +59,8 @@
 		7B876B4926C0B28A008D9077 = {
 			isa = PBXGroup;
 			children = (
-				7B876B5526C0B28A008D9077 /* ShengjiTracker */,
-				7B876B5F26C0B28A008D9077 /* ShengjiTrackerTests */,
+				7B876B5526C0B28A008D9077 /* ShengjiTrackerEngine */,
+				7B876B5F26C0B28A008D9077 /* ShengjiTrackerEngineTests */,
 				7B876B5426C0B28A008D9077 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,23 +68,22 @@
 		7B876B5426C0B28A008D9077 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B876B5326C0B28A008D9077 /* ShengjiTracker.framework */,
-				7B876B5B26C0B28A008D9077 /* ShengjiTrackerTests.xctest */,
+				7B876B5326C0B28A008D9077 /* ShengjiTrackerEngine.framework */,
+				7B876B5B26C0B28A008D9077 /* ShengjiTrackerEngineTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7B876B5526C0B28A008D9077 /* ShengjiTracker */ = {
+		7B876B5526C0B28A008D9077 /* ShengjiTrackerEngine */ = {
 			isa = PBXGroup;
 			children = (
-				7B876B5626C0B28A008D9077 /* ShengjiTracker.h */,
 				7B876B6D26C0B39A008D9077 /* Game.swift */,
 				7B876B7126C0C198008D9077 /* PlayerTracker.swift */,
 			);
-			path = ShengjiTracker;
+			path = ShengjiTrackerEngine;
 			sourceTree = "<group>";
 		};
-		7B876B5F26C0B28A008D9077 /* ShengjiTrackerTests */ = {
+		7B876B5F26C0B28A008D9077 /* ShengjiTrackerEngineTests */ = {
 			isa = PBXGroup;
 			children = (
 				7B876B6B26C0B30F008D9077 /* GameTests.swift */,
@@ -94,7 +91,7 @@
 				7B876B7326C0C1A0008D9077 /* PlayerTrackerTests.swift */,
 				7B876B7526C0CCD3008D9077 /* PlayerTests.swift */,
 			);
-			path = ShengjiTrackerTests;
+			path = ShengjiTrackerEngineTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,16 +101,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B876B6226C0B28A008D9077 /* ShengjiTracker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7B876B5226C0B28A008D9077 /* ShengjiTracker */ = {
+		7B876B5226C0B28A008D9077 /* ShengjiTrackerEngine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B876B6526C0B28A008D9077 /* Build configuration list for PBXNativeTarget "ShengjiTracker" */;
+			buildConfigurationList = 7B876B6526C0B28A008D9077 /* Build configuration list for PBXNativeTarget "ShengjiTrackerEngine" */;
 			buildPhases = (
 				7B876B4E26C0B28A008D9077 /* Headers */,
 				7B876B4F26C0B28A008D9077 /* Sources */,
@@ -124,14 +120,14 @@
 			);
 			dependencies = (
 			);
-			name = ShengjiTracker;
+			name = ShengjiTrackerEngine;
 			productName = ShengjiTracker;
-			productReference = 7B876B5326C0B28A008D9077 /* ShengjiTracker.framework */;
+			productReference = 7B876B5326C0B28A008D9077 /* ShengjiTrackerEngine.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7B876B5A26C0B28A008D9077 /* ShengjiTrackerTests */ = {
+		7B876B5A26C0B28A008D9077 /* ShengjiTrackerEngineTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B876B6826C0B28A008D9077 /* Build configuration list for PBXNativeTarget "ShengjiTrackerTests" */;
+			buildConfigurationList = 7B876B6826C0B28A008D9077 /* Build configuration list for PBXNativeTarget "ShengjiTrackerEngineTests" */;
 			buildPhases = (
 				7B876B5726C0B28A008D9077 /* Sources */,
 				7B876B5826C0B28A008D9077 /* Frameworks */,
@@ -142,9 +138,9 @@
 			dependencies = (
 				7B876B5E26C0B28A008D9077 /* PBXTargetDependency */,
 			);
-			name = ShengjiTrackerTests;
+			name = ShengjiTrackerEngineTests;
 			productName = ShengjiTrackerTests;
-			productReference = 7B876B5B26C0B28A008D9077 /* ShengjiTrackerTests.xctest */;
+			productReference = 7B876B5B26C0B28A008D9077 /* ShengjiTrackerEngineTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -166,7 +162,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7B876B4D26C0B28A008D9077 /* Build configuration list for PBXProject "ShengjiTracker" */;
+			buildConfigurationList = 7B876B4D26C0B28A008D9077 /* Build configuration list for PBXProject "ShengjiTrackerEngine" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -179,8 +175,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7B876B5226C0B28A008D9077 /* ShengjiTracker */,
-				7B876B5A26C0B28A008D9077 /* ShengjiTrackerTests */,
+				7B876B5226C0B28A008D9077 /* ShengjiTrackerEngine */,
+				7B876B5A26C0B28A008D9077 /* ShengjiTrackerEngineTests */,
 			);
 		};
 /* End PBXProject section */
@@ -228,7 +224,7 @@
 /* Begin PBXTargetDependency section */
 		7B876B5E26C0B28A008D9077 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B876B5226C0B28A008D9077 /* ShengjiTracker */;
+			target = 7B876B5226C0B28A008D9077 /* ShengjiTrackerEngine */;
 			targetProxy = 7B876B5D26C0B28A008D9077 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -359,10 +355,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3WM87N8XYQ;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -375,7 +373,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.monorailapps.ShengjiTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.monorailapps.ShengjiTrackerEngine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -388,10 +386,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3WM87N8XYQ;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -404,7 +404,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.monorailapps.ShengjiTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.monorailapps.ShengjiTrackerEngine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -457,7 +457,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7B876B4D26C0B28A008D9077 /* Build configuration list for PBXProject "ShengjiTracker" */ = {
+		7B876B4D26C0B28A008D9077 /* Build configuration list for PBXProject "ShengjiTrackerEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B876B6326C0B28A008D9077 /* Debug */,
@@ -466,7 +466,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B876B6526C0B28A008D9077 /* Build configuration list for PBXNativeTarget "ShengjiTracker" */ = {
+		7B876B6526C0B28A008D9077 /* Build configuration list for PBXNativeTarget "ShengjiTrackerEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B876B6626C0B28A008D9077 /* Debug */,
@@ -475,7 +475,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B876B6826C0B28A008D9077 /* Build configuration list for PBXNativeTarget "ShengjiTrackerTests" */ = {
+		7B876B6826C0B28A008D9077 /* Build configuration list for PBXNativeTarget "ShengjiTrackerEngineTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B876B6926C0B28A008D9077 /* Debug */,
