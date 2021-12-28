@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import ShengjiTracker
+@testable import ShengjiTrackerEngine
 
 class PlayerTests: XCTestCase {
     func test_emptyState_playerShouldHaveNoTerminatedSuits() {

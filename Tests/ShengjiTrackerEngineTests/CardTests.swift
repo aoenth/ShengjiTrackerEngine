@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import ShengjiTracker
+@testable import ShengjiTrackerEngine
 
 class CardTests: XCTestCase {
     func test_canInstantiateAceOfSpades() {

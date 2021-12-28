@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import ShengjiTracker
+@testable import ShengjiTrackerEngine
 
 class GameTests: XCTestCase {
     func test_start_existingCards_shouldBeEmpty() {
