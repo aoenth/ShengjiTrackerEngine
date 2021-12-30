@@ -27,8 +27,14 @@ class Game: Trackable {
 }
 
 public struct Card: Hashable {
+
     public let suit: Suit?
     public let rank: Rank
+
+    public init(suit: Suit?, rank: Rank) {
+        self.suit = suit
+        self.rank = rank
+    }
 
     public static let leftBower = Card(suit: .none, rank: .leftBower)
     public static let rightBower = Card(suit: .none, rank: .rightBower)
