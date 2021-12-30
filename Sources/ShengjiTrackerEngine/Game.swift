@@ -15,34 +15,30 @@ class Game: Trackable {
     var playedCards = [Card: Int]()
     var level = 2
     
-    func start(level: Int = 2) {
+    public func start(level: Int = 2) {
         self.level = level
         playedCards.removeAll(keepingCapacity: true)
     }
 
-    func playCard(_ card: Card) {
+    public func playCard(_ card: Card) {
         guard playedCards[card] ?? 0 < 2 else { return }
         playedCards[card, default: 0] += 1
     }
 }
 
-struct Card: Hashable {
-    let suit: Suit
-    let rank: Rank
+public struct Card: Hashable {
+    public let suit: Suit?
+    public let rank: Rank
 
-    static let leftBower = Card(suit: .none, rank: .leftBower)
-    static let rightBower = Card(suit: .none, rank: .rightBower)
+    public static let leftBower = Card(suit: .none, rank: .leftBower)
+    public static let rightBower = Card(suit: .none, rank: .rightBower)
 }
 
-enum Suit: UInt8 {
-    case spades, hearts, clubs, diamonds, none
-
-    static var allSuits: [Suit] {
-        [.spades, .hearts, .clubs, .diamonds]
-    }
+public enum Suit: UInt8, CaseIterable {
+    case spades, hearts, clubs, diamonds
 }
 
-enum Rank: UInt8 {
+public enum Rank: UInt8, CaseIterable {
     case two = 2
     case three
     case four

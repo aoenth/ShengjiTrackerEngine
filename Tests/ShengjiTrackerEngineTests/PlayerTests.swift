@@ -12,7 +12,7 @@ class PlayerTests: XCTestCase {
     func test_emptyState_playerShouldHaveNoTerminatedSuits() {
         let sut = Player()
 
-        for suit in Suit.allSuits {
+        for suit in Suit.allCases {
             XCTAssertFalse(sut.isTerminal(for: suit))
         }
     }
@@ -48,7 +48,7 @@ class PlayerTests: XCTestCase {
         sut.terminate(suit: .hearts)
         sut.start(level: 2)
 
-        for suit in Suit.allSuits {
+        for suit in Suit.allCases {
             XCTAssertFalse(sut.isTerminal(for: suit))
         }
     }

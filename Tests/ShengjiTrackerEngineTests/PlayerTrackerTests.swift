@@ -69,7 +69,7 @@ class PlayerTrackerTests: XCTestCase {
 
     private func assertEmpty(sut: PlayerTracker) {
         for player in sut.players {
-            for suit in Suit.allSuits {
+            for suit in Suit.allCases {
                 XCTAssertFalse(player.isTerminal(for: suit))
             }
         }
